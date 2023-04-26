@@ -8,11 +8,11 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-const apiUrl = 'https://myflix-app.herokuapp.com/';
+const apiUrl = 'https://myflix-app.herokuapp.com';
 @Injectable({
   providedIn: 'root',
 })
-export class UserRegistrationService {
+export class FetchApiDataService {
   constructor(private http: HttpClient) {}
 
   userRegistration(userDetails: any): Observable<any> {
@@ -162,6 +162,6 @@ export class UserRegistrationService {
         `Error Status code ${error.status}, ` + `Error body is: ${error.error}`
       );
     }
-    return throwError('Something bad happened; please try again later.');
+    return throwError('Something bad happened, please try again later.');
   }
 }
