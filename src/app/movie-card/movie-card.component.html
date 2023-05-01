@@ -1,0 +1,41 @@
+<div class="flex">
+  <div fxLayout="row wrap" fxLayoutGap="18px grid">
+    <!-- <mat-grid-list cols="2"> -->
+    <!-- <mat-grid-tile *ngFor="let movie of movies"> -->
+    <div
+      fxFlex="25%"
+      fxFlex.xs="100%"
+      fxFlex.sm="45%"
+      fxFlex.md="31%"
+      *ngFor="let movie of movies"
+    >
+      <mat-card style="background-color: #2195f3b7">
+        <div class="header">
+          <mat-card-header>
+            <mat-card-title style="color: rgb(255, 255, 255)">{{
+              movie.Title
+            }}</mat-card-title>
+            <mat-card-subtitle style="color: rgba(255, 255, 255, 0.822)"
+              >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
+            >
+          </mat-card-header>
+        </div>
+        <img src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
+        <mat-card-actions style="margin-bottom: 8px">
+          <button (click)="openGenre(movie)">Genre</button>
+          <button (click)="openDirector(movie)">Director</button>
+          <button (click)="openDetails(movie)">Details</button>
+          <a class="add-to-favorite-btn" (click)="toggleFavorite(movie._id)">
+            <mat-icon
+              [class]="isFavorite(movie._id) ? 'favorite' : 'non-favorite'"
+            >
+              {{ isFavorite(movie._id) ? "favorite" : "favorite_border" }}
+            </mat-icon>
+          </a>
+        </mat-card-actions>
+      </mat-card>
+      <!-- </mat-grid-tile> -->
+      <!-- </mat-grid-list> -->
+    </div>
+  </div>
+</div>
