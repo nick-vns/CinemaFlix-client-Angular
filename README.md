@@ -6,6 +6,13 @@ Build a client-side for an app CinemaFlix using React, CinemaFlix based on exist
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
+## Key Features
+
++ Rounting between pages
++ Accessibility to user's account data including interact with and change it
++ Accessibility to movie's data to see details and find common movies
++ To see all movies including search option to find one
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
