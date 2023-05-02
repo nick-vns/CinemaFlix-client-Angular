@@ -13,6 +13,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 + Accessibility to movie's data to see details and find common movies
 + To see all movies including search option to find one
 
+## Links
+
+Documentation for an [API](https://myflix-app.herokuapp.com/documentation.html)
+
+GitHub page with [Code](https://github.com/nick-vns/movie_api) for an API
+
+See my project in [Live Demo](https://nick-vns.github.io/CinemaFlix-client-Angular/welcome)  
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
