@@ -15,7 +15,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Links
 
-Documentation for an [API](https://myflix-app.herokuapp.com/documentation.html)`:targer="_blank"`.  
+Documentation for an [API](https://myflix-app.herokuapp.com/documentation.html){:target="_blank" rel="noopener"}.  
 
 GitHub page with [Code](https://github.com/nick-vns/movie_api)`targer="_blank"` for an API.
 
