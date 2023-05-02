@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap");
 div {
-  display: block;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.878);
+  height: auto;
+  font-family: "Ubuntu", sans-serif;
+  background-image: linear-gradient(
+      rgba(101, 97, 89, 0.797),
+      rgba(121, 116, 108, 0.609)
+    ),
+    url(https://img5.goodfon.com/wallpaper/nbig/c/af/sssssss-aaaaaaaaaaa-ddddddddd-fffffffff-rrrrrrr.jpg);
 }

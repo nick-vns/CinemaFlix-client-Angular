@@ -83,7 +83,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  getFavoriteMovie(): Observable<any> {
+  getFavoriteMovies(): Observable<any> {
     const username = localStorage.getItem('user');
     const token = localStorage.getItem('token');
     return this.http
@@ -92,7 +92,11 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(
+        map(this.extractResponseData),
+        map((data) => data.FavoriteMovies),
+        catchError(this.handleError)
+      );
   }
 
   addFavoriteMovie(movieId: string): Observable<any> {

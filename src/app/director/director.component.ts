@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -6,7 +6,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './director.component.html',
   styleUrls: ['./director.component.scss'],
 })
-export class DirectorComponent {
+export class DirectorComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA)
     public data: {
@@ -15,4 +15,6 @@ export class DirectorComponent {
       Birth: string;
     }
   ) {}
+
+  ngOnInit(): void {}
 }

@@ -22,25 +22,19 @@ export class MovieCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies();
-    this.getFavorites();
+    this.getFavoriteMovies();
   }
 
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
-      return this.movies;
     });
   }
 
-  getFavorites(): any {
-    this.fetchApiData.getUser().subscribe((resp: any) => {
-      this.favorites = resp.FavoriteMovie;
-      return this.favorites;
+  getFavoriteMovies(): any {
+    this.fetchApiData.getFavoriteMovies().subscribe((resp: any) => {
+      this.favorites = resp;
     });
-  }
-
-  isFavorite(id: string): boolean {
-    return this.favorites.includes(id);
   }
 
   addFavorites(id: string): void {
@@ -59,6 +53,10 @@ export class MovieCardComponent implements OnInit {
       });
       this.ngOnInit();
     });
+  }
+
+  isFavorite(id: string): boolean {
+    return this.favorites.includes(id);
   }
 
   toggleFavorite(id: string): void {

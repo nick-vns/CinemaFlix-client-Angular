@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,8 +6,10 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   constructor(public router: Router) {}
+
+  ngOnInit(): void {}
 
   toMovies(): void {
     this.router.navigate(['movies']);
@@ -18,7 +20,7 @@ export class NavbarComponent {
   }
 
   logout(): void {
-    this.router.navigate(['welcome']);
     localStorage.clear();
+    this.router.navigate(['welcome']);
   }
 }

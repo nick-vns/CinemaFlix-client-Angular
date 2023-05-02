@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
-import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { formatDate } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -21,7 +20,6 @@ export class UserProfileComponent implements OnInit {
 
   constructor(
     public fetchApiData: FetchApiDataService,
-    public dialogRef: MatDialogRef<UserProfileComponent>,
     public snackBar: MatSnackBar,
     private router: Router
   ) {}
@@ -37,7 +35,7 @@ export class UserProfileComponent implements OnInit {
       this.updatedUser.Email = this.user.Email;
       this.updatedUser.Birthday = formatDate(
         this.user.Birthday,
-        'MM-dd-yyyy',
+        'yyyy-MM-dd',
         'en-US'
       );
       return this.user;

@@ -1,14 +1,40 @@
-.main-page {
-  display: block;
-  text-align: center;
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+mat-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-bottom: 100px;
+  font-family: "Ubuntu", sans-serif;
+  background-image: linear-gradient(
+      rgba(101, 97, 89, 0.797),
+      rgba(121, 116, 108, 0.609)
+    ),
+    url(https://img5.goodfon.com/wallpaper/nbig/c/af/sssssss-aaaaaaaaaaa-ddddddddd-fffffffff-rrrrrrr.jpg);
 }
-h1 {
+mat-card-title {
+  box-shadow: 0 2px 5px rgba(216, 204, 204, 0.64);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.728);
   font-size: 35px;
+  color: white;
+  text-align: center;
 }
+
 button {
-  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.728);
+  color: #fff;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 4px rgba(237, 231, 231, 0.3);
 }
