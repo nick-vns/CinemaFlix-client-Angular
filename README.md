@@ -19,7 +19,7 @@ Documentation for an [API](https://myflix-app.herokuapp.com/documentation.html).
 
 GitHub page with [Code](https://github.com/nick-vns/movie_api) for an API.
 
-See my project in [Live Demo](https://nick-vns.github.io/CinemaFlix-client-Angular/welcome).  
+See my project in [Live Demo](https://nick-vns.github.io/CinemaFlix-client-Angular/).  
 
 ## Development server
 
