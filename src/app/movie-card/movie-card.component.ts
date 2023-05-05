@@ -25,17 +25,35 @@ export class MovieCardComponent implements OnInit {
     this.getFavoriteMovies();
   }
 
+  /**
+   * Fetch movies via API and set movies state to returned JSON file
+   * @returns array holding movies objects
+   * @function getMovies
+   */
+
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
     });
   }
 
+  /**
+   * Fetch user info via API and set favorites state to returned JSON file
+   * @returns array holding IDs of favorites
+   * @function getFavoriteMovies
+   */
+
   getFavoriteMovies(): any {
     this.fetchApiData.getFavoriteMovies().subscribe((resp: any) => {
       this.favorites = resp;
     });
   }
+
+  /**
+   * Adds a movie to a user's favorites via an API call
+   * @param {string} id
+   * @function addToFavorite
+   */
 
   addFavorites(id: string): void {
     this.fetchApiData.addFavoriteMovie(id).subscribe((result) => {
@@ -46,6 +64,12 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Removes a movie from a user's favorites via an API call
+   * @param {string} id
+   * @function removeFromFavorite
+   */
+
   removeFavorites(id: string): void {
     this.fetchApiData.removeFavoriteMovie(id).subscribe((result) => {
       this.snackBar.open('Movie has been removed', 'OK', {
@@ -54,6 +78,13 @@ export class MovieCardComponent implements OnInit {
       this.ngOnInit();
     });
   }
+
+  /**
+   * Checks if a movie is included in a user's favorite movies
+   * @param {string} id
+   * @returns boolean
+   * @function movieIsFavorite
+   */
 
   isFavorite(id: string): boolean {
     return this.favorites.includes(id);
@@ -67,6 +98,12 @@ export class MovieCardComponent implements OnInit {
     }
   }
 
+  /**
+   * Opens movie details from MovieDetailsComponent
+   * @param {Movie} movie
+   * @function openMovieDetails
+   */
+
   openDetails(movie: any): void {
     const { Name, Description } = movie;
     this.dialog.open(MovieDetailsComponent, {
@@ -75,6 +112,12 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens genre information from GenreComponent
+   * @param {Movie} movie
+   * @function openGenre
+   */
+
   openGenre(movie: any): void {
     const { Name, Description } = movie.Genre;
     this.dialog.open(GenreComponent, {
@@ -82,6 +125,12 @@ export class MovieCardComponent implements OnInit {
       width: '25rem',
     });
   }
+
+  /**
+   * Opens director information from DirectorComponent
+   * @param {Movie} movie
+   * @function openDirector
+   */
 
   openDirector(movie: any): void {
     const { Name, Birth, Bio } = movie.Director;
