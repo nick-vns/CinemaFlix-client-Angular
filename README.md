@@ -45,6 +45,11 @@ See my project in [Live Demo](https://nick-vns.github.io/CinemaFlix-client-Angul
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
+    
+## Screenshots 
+![signup page](docs/screenshots/welcome.png)
+![homepage](docs/screenshots/home.png)
+![account](docs/screenshots/profile.png)
 
 ## Development server
 
