@@ -21,6 +21,31 @@ GitHub page with [Code](https://github.com/nick-vns/movie_api) for an API.
 
 See my project in [Live Demo](https://nick-vns.github.io/CinemaFlix-client-Angular/).  
 
+## TechStack
+
++ TypeScript
++ Angular 
++ TypeDoc
++ Full-Stack
++ SCSS
+
+## Dependencies 
+
+    "@angular/animations": "^15.2.0",
+    "@angular/cdk": "^15.2.8",
+    "@angular/common": "^15.2.0",
+    "@angular/compiler": "^15.2.0",
+    "@angular/core": "^15.2.0",
+    "@angular/flex-layout": "^15.0.0-beta.42",
+    "@angular/forms": "^15.2.0",
+    "@angular/material": "^15.2.8",
+    "@angular/platform-browser": "^15.2.0",
+    "@angular/platform-browser-dynamic": "^15.2.0",
+    "@angular/router": "^15.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.12.0"
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
